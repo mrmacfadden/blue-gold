@@ -22,13 +22,15 @@
                 margin:0;
                 padding:0;
             }
-            #yellow{
+            #gold{
                 background:yellow;
-                display:block;
+                display: none;
+
             }
             #blue{
                 background:blue;
-                display:block;
+                display:none;
+
             }
             button{
                 margin:20px 0;
@@ -38,17 +40,17 @@
             h1{margin:0;}
         </style>
     </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <body onload="blueGold()">
+
         
-        <div class="day" id="yellow">
+        <div class="day" id="gold">
             <h1>Gold Day</h1>
         </div>
         <div class="day" id="blue">
             <h1>Blue Day</h1>
         </div>
+
+        <h2 id="date"></h2>
         
         <button onclick="myFunction()">SWITCH</button>
 
@@ -56,7 +58,19 @@
             function myFunction() {
                 document.getElementById('blue').style.display = 'none';
             }
+
             const d = new Date();
+            let text = d.toLocaleDateString();
+            
+            function blueGold(){
+                if ( text == '11/2/2021' || '11/4/2021'){
+                    document.getElementById('gold').style.display = 'block';
+                }
+                else if (text == '11/3/2021' || '11/5/2021') {
+                    document.getElementById('blue').style.display = 'block';
+                }
+            }
+            
         </script>
     </body>
 </html>
