@@ -1,0 +1,62 @@
+*,
+*:before,
+*:after{
+    box-sizing:border-box;
+}
+html,body{
+    height:100%;
+}
+body{
+    text-align: center;
+    margin:0;
+    padding:0;
+}
+.day{
+    height:100%;
+    margin:0;
+    padding:0;
+}
+#gold{
+    background: rgb(255,205,0);
+    background: radial-gradient(circle, rgba(255,205,0,1) 0%, rgba(255,175,0,1) 100%);
+    display:none;
+
+}
+#blue{
+    background: rgb(0,101,205);
+    background: radial-gradient(circle, rgba(0,101,205,1) 0%, rgba(0,34,168,1) 100%);
+    display:none;
+    color:#FFF;
+
+}
+#grey{
+    background: rgb(159,159,159);
+    background: radial-gradient(circle, rgba(159,159,159,1) 0%, rgba(93,93,93,1) 100%);
+    display:none;
+}
+button{
+    margin:20px 0;
+    width:100%;
+    padding:20px;
+}
+/*
+=================================================
+TYPOGRAPHY
+=================================================
+*/
+h1{
+    margin:0;
+    padding-top:200px;
+    font-family: 'Russo One', sans-serif;
+    font-size:54px;
+}
+h2{
+  font-family: 'Roboto', sans-serif;  
+}
+
+#blueDate{
+    color:#ccc;
+}
+#greyDate{
+    color:#FFF;
+}
